@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hall of Zero Limits | Full Cinematic Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+      <div class="hero-title">ZERO LIMITS</div>
+      <div class="loading-progress">
+        <div class="loading-progress-bar"></div>
+      </div>
+    </div>
+
+    <!-- Background Layers -->
+    <div class="bg-layer wireframe active"></div>
+    <div class="bg-layer garden"></div>
+    <div class="bg-layer final"></div>
+
+    <!-- Canvas Scene -->
+    <div id="scene-container">
+      <canvas id="scene-canvas"></canvas>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress">
+      <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Navigation Dots -->
+    <div class="nav-dots">
+      <div class="nav-dot active" data-section="hero"></div>
+      <div class="nav-dot" data-section="tutorial"></div>
+      <div class="nav-dot" data-section="origin"></div>
+      <div class="nav-dot" data-section="library"></div>
+      <div class="nav-dot" data-section="sprite"></div>
+      <div class="nav-dot" data-section="garden"></div>
+      <div class="nav-dot" data-section="quiz"></div>
+      <div class="nav-dot" data-section="find"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Section 1: Hero -->
+      <section class="section" id="hero">
+        <div class="section-content">
+          <div class="cinematic-line">
+            <span class="cinematic-word">You</span>
+          </div>
+          <div class="cinematic-line">
+            <span class="cinematic-word">have</span>
+          </div>
+          <div class="cinematic-line">
+            <span class="cinematic-word">entered</span>
+          </div>
+          <div class="cinematic-line">
+            <span class="cinematic-word">the</span>
+          </div>
+          <div class="cinematic-line">
+            <span class="cinematic-word">Hall</span>
+          </div>
+          <div class="cinematic-line">
+            <span class="cinematic-word">of</span>
+          </div>
+          <div class="cinematic-line">
+            <span class="cinematic-word">Zero</span>
+          </div>
+          <div class="cinematic-line">
+            <span class="cinematic-word">Limits.</span>
+          </div>
+          <div class="section-subtitle" style="margin-top: var(--spacing-xl)">
+            Great things lie ahead for all who open themselves to finding their
+            gift.
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Tutorial -->
+      <section class="section" id="tutorial">
+        <div class="section-content">
+          <div class="section-subtitle">Tutorial</div>
+          <div class="hero-title">Swipe to explore</div>
+          <div class="section-subtitle" style="margin-top: var(--spacing-lg)">
+            Swipe up and down to navigate through the Hall
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: The Hall -->
+      <section class="section" id="hall">
+        <div class="section-content">
+          <div class="section-subtitle">Welcome to</div>
+          <div class="hero-title">The Hall of Zero Limits</div>
+          <div class="section-subtitle" style="margin-top: var(--spacing-lg)">
+            An ever-changing space for creativity and growth
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Origin Stories -->
+      <section class="section" id="origin">
+        <div class="section-content">
+          <div class="section-subtitle">Origin Stories</div>
+          <div class="section-title">Find your inspiration</div>
+          <div class="cards-grid">
+            <!-- Card 1 -->
+            <div class="audio-card">
+              <div class="card-header">
+                <div class="card-name">Hannah Beachler</div>
+                <div class="card-role">Production designer</div>
+              </div>
+              <div class="audio-player">
+                <div class="player-controls">
+                  <button
+                    aria-label="icon"
+                    type="button"
+                    class="play-btn"
+                    data-audio="audio1"
+                  >
+                    <i class="fas fa-play"></i>
+                  </button>
+                  <div class="player-info">
+                    <div class="progress-container">
+                      <div class="progress-bar" id="progress1"></div>
+                    </div>
+                    <div class="time-display">
+                      <span id="current1">00:00</span>
+                      <span id="duration1">00:00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="audio-card">
+              <div class="card-header">
+                <div class="card-name">Jasmine Alexia</div>
+                <div class="card-role">Storyboard artist</div>
+              </div>
+              <div class="audio-player">
+                <div class="player-controls">
+                  <button
+                    aria-label="icon"
+                    type="button"
+                    class="play-btn"
+                    data-audio="audio2"
+                  >
+                    <i class="fas fa-play"></i>
+                  </button>
+                  <div class="player-info">
+                    <div class="progress-container">
+                      <div class="progress-bar" id="progress2"></div>
+                    </div>
+                    <div class="time-display">
+                      <span id="current2">00:00</span>
+                      <span id="duration2">00:00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="audio-card">
+              <div class="card-header">
+                <div class="card-name">Alícia Díaz</div>
+                <div class="card-role">Sculptor</div>
+              </div>
+              <div class="audio-player">
+                <div class="player-controls">
+                  <button
+                    aria-label="icon"
+                    type="button"
+                    class="play-btn"
+                    data-audio="audio3"
+                  >
+                    <i class="fas fa-play"></i>
+                  </button>
+                  <div class="player-info">
+                    <div class="progress-container">
+                      <div class="progress-bar" id="progress3"></div>
+                    </div>
+                    <div class="time-display">
+                      <span id="current3">00:00</span>
+                      <span id="duration3">00:00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: The Library -->
+      <section class="section" id="library">
+        <div class="section-content">
+          <div class="section-subtitle">The Library</div>
+          <div class="section-title">More help finding your gift</div>
+          <div class="cards-grid">
+            <!-- Library Cards (similar structure) -->
+            <div class="audio-card">
+              <div class="card-header">
+                <div class="card-name">Naya</div>
+                <div class="card-role">Software engineer</div>
+              </div>
+              <div class="audio-player">
+                <div class="player-controls">
+                  <button
+                    aria-label="icon"
+                    type="button"
+                    class="play-btn"
+                    data-audio="audio4"
+                  >
+                    <i class="fas fa-play"></i>
+                  </button>
+                  <div class="player-info">
+                    <div class="progress-container">
+                      <div class="progress-bar" id="progress4"></div>
+                    </div>
+                    <div class="time-display">
+                      <span id="current4">00:00</span>
+                      <span id="duration4">00:00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add more library cards -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: SpriteZero Sugar -->
+      <section class="section product-reveal" id="sprite">
+        <div class="section-content">
+          <div class="section-subtitle">SpriteZero Sugar®</div>
+          <div class="section-title">Open your infinite potential</div>
+          <div class="section-subtitle">
+            A new path forged. A most refreshing discovery.
+          </div>
+          <div class="product-image" id="product-canvas-container">
+            <!-- Canvas for product visualization -->
+            <canvas id="product-canvas" width="300" height="300"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: Inspiration Garden -->
+      <section class="section" id="garden">
+        <div class="section-content">
+          <div class="cinematic-line">
+            <span class="cinematic-word">I</span>
+          </div>
+          <div class="cinematic-line">
+            <span class="cinematic-word">see</span>
+          </div>
+          <div class="cinematic-line">
+            <span class="cinematic-word">you've</span>
+          </div>
+          <div class="cinematic-line">
+            <span class="cinematic-word">made</span>
+          </div>
+          <div class="cinematic-line">
+            <span class="cinematic-word">it</span>
+          </div>
+          <div class="cinematic-line">
+            <span class="cinematic-word">to</span>
+          </div>
+          <div class="cinematic-line">
+            <span class="cinematic-word">the</span>
+          </div>
+          <div class="cinematic-line">
+            <span class="cinematic-word">Inspiration</span>
+          </div>
+          <div class="cinematic-line">
+            <span class="cinematic-word">Garden.</span>
+          </div>
+          <div
+            class="section-subtitle"
+            style="margin-top: var(--spacing-xl); max-width: 800px"
+          >
+            This place carries more purpose than simply being pleasing to the
+            eye. Here we've collected monuments that represent some of the many
+            gifts that may find you in this hall.
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8: Quiz -->
+      <section class="section quiz-section" id="quiz">
+        <div class="section-content">
+          <div class="section-subtitle">Question 1</div>
+          <div class="section-title">Select a Movie Genre</div>
+          <div class="quiz-options">
+            <div class="quiz-option" data-option="documentary">
+              <div class="option-title">Documentary</div>
+              <div class="section-subtitle">Click to select</div>
+            </div>
+            <div class="quiz-option" data-option="comedy">
+              <div class="option-title">Comedy</div>
+              <div class="section-subtitle">Click to select</div>
+            </div>
+          </div>
+          <div class="section-subtitle" style="margin-top: var(--spacing-xl)">
+            Select a card to continue
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 9: Find Your Gift -->
+      <section class="section" id="find">
+        <div class="section-content">
+          <div class="cinematic-line">
+            <span class="cinematic-word">You've</span>
+          </div>
+          <div class="cinematic-line">
+            <span class="cinematic-word">made</span>
+          </div>
+          <div class="cinematic-line">
+            <span class="cinematic-word">great</span>
+          </div>
+          <div class="cinematic-line">
+            <span class="cinematic-word">strides</span>
+          </div>
+          <div class="cinematic-line">
+            <span class="cinematic-word">toward</span>
+          </div>
+          <div class="cinematic-line">
+            <span class="cinematic-word">finding</span>
+          </div>
+          <div class="cinematic-line">
+            <span class="cinematic-word">your</span>
+          </div>
+          <div class="cinematic-line">
+            <span class="cinematic-word">gift.</span>
+          </div>
+          <div
+            class="section-subtitle"
+            style="margin-top: var(--spacing-xl); max-width: 800px"
+          >
+            Your legacy is a continuous journey and it does not end here. Keep
+            exploring or share the experience with your friends.
+          </div>
+          <div class="section-subtitle" style="margin-top: var(--spacing-lg)">
+            Remember, all are welcome to find their place in the Hall of Zero
+            Limits.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Audio Elements -->
+    <audio id="audio1" preload="metadata">
+      <source
+        src="https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="audio2" preload="metadata">
+      <source
+        src="https://assets.mixkit.co/music/preview/mixkit-driving-ambition-32.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="audio3" preload="metadata">
+      <source
+        src="https://assets.mixkit.co/music/preview/mixkit-deep-urban-623.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="audio4" preload="metadata">
+      <source
+        src="https://assets.mixkit.co/music/preview/mixkit-sci-fi-mission-167.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+  </body>
+  <script src="/app.js"></script>
+</html>
